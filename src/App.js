@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header.js';
+import Footer from './Components/Footer.js';
 
 class App extends Component {
   constructor(props) {
@@ -16,6 +17,7 @@ class App extends Component {
         <div id='main-view'>
           <div id='map'>Map</div>
         </div>
+        <Footer />
       </div>
     );
   }
