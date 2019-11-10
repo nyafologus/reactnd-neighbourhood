@@ -6,7 +6,10 @@ import Footer from './Components/Footer.js';
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      // loads Magical Places array from external json file
+      mylocations: require('./Data/Places.json')
+    };
   }
 
   // componentDidMount() {}
