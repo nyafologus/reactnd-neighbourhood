@@ -55,10 +55,40 @@
   color: white;
 }
 
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
 body {
   font-size: var(--main-font-size);
   color: var(--midnight-black);
   background: var(--midnight-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: normal;
+}
+
+.searchmatch {
+  font-weight: bold;
+}
+
+.center {
+  text-align: center;
 }
 
 /*========== Top Header ===========*/
@@ -86,6 +116,8 @@ header .leckerli {
 /*========== Side Navigation Bar ===========*/
 
 nav {
+  min-width: 48px;
+  min-height: 48px;
   width: 100%;
   height: 55px;
   background: var(--midnight-black);
