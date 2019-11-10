@@ -61,6 +61,28 @@ body {
   background: var(--midnight-black);
 }
 
+/*========== Top Header ===========*/
+
+header {
+  display: flex;
+  flex-flow: column wrap;
+  width: 100%;
+  background-color: var(--midnight-blue);
+  justify-content: center;
+  align-items: center;
+  padding-bottom: var(--big-padding);
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+}
+
+header .leckerli {
+  font-size: 2em;
+  color: var(--pumpkin);
+}
+
 /*========== Side Navigation Bar ===========*/
 
 nav {
