@@ -7,10 +7,20 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // visibility refers to the state of navigation bar
+      visible: false,
       // loads Magical Places array from external json file
       mylocations: require('./Data/Places.json'),
       data: []
     };
+    this.NavBarIsVisible = this.NavBarIsVisible.bind(this);
+  }
+
+  // changes visibility of side Navigation Bar
+  NavBarIsVisible() {
+    this.setState({
+      visible: !this.state.visible
+    });
   }
 
   requestWikiData() {
@@ -58,7 +68,7 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
-        <NavBar />
+        <NavBar visible={this.state.visible} onMouseDown={this.NavBarIsVisible} />
         <Header />
         <div id='main-view'>
           <div id='map'>Map</div>
