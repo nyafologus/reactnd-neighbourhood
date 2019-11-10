@@ -1,22 +1,62 @@
+@import url("https://fonts.googleapis.com/css?family=Leckerli+One");
+
+.leckerli {
+  font-family: "Leckerli One";
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --main-font-size: 18px;
+  --main-margin: 3%;
+  --main-padding: 1%;
+  --big-padding: 6%;
+  --big-margin: 6%;
+  --midnight-black: #0e1119;
+  --midnight-purple: #3c4370;
+  --midnight-navy: #0f152c;
+  --purple-light: #5861b0;
+  --midnight-blue: #141831;
+  --purple-dark: #40468a;
+  --pumpkin: #edb600;
+}
+
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  animation: App-logo-spin infinite 20s linear;
+  height: 100px;
+  margin-top: 15px;
+  margin-right: 20px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #222;
+  height: 100px;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+body {
+  font-size: var(--main-font-size);
+  color: var(--midnight-black);
+  background: var(--midnight-black);
 }
