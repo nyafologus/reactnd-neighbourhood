@@ -9,9 +9,9 @@ This single page application was built from scratch using ReactJS, and features 
 
   - Copy/clone repository from Github using Git:
 ```sh
-$ git clone git@github.com:nyafologus/reactnd-neighbourhood-project.git
+$ git clone git@github.com:nyafologus/reactnd-neighbourhood.git
 ``` 
-  - (or download it from [here](https://github.com/nyafologus/reactnd-neighbourhood-project/archive/master.zip "Download ZIP").)
+  - (or download it from [here](https://github.com/nyafologus/reactnd-neighbourhood/archive/master.zip "Download ZIP").)
 
   - Navigate into project directory
 
