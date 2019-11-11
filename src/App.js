@@ -1,3 +1,6 @@
+/* global google */
+// credit to ArtemKislov on  his/her comment on Sep 17 2017 @ "https://github.com/tomchentw/react-google-maps/issues/414"
+
 import React, { Component } from 'react';
 import './App.css';
 import NavBar from './Components/NavBar.js';
@@ -12,7 +15,10 @@ class App extends Component {
       visible: false,
       // loads Magical Places array from external json file
       mylocations: require('./Data/Places.json'),
-      data: []
+      data: [],
+      // indicates map loading request
+      request: false,
+      map: {}
     };
     this.NavBarIsVisible = this.NavBarIsVisible.bind(this);
   }
@@ -61,9 +67,41 @@ class App extends Component {
     });
   }
 
+  // credits go to commenters at https://stackoverflow.com/questions/48493960/using-google-map-in-react-component/
+  loadMap() {
+    if (!this.loadGM) {
+      // define promise
+      this.loadGM = new Promise((resolve) => {
+        // add global handler upon successful API load
+        window.resGM = () => {
+          this.setState({ request: true });
+          // resolve promise
+          resolve(google);
+          delete window.resGM;
+        };
+
+        // load GM API
+        const script = document.createElement('script');
+        const API = '';
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${API}&callback=resGM`;
+        script.async = true;
+        document.body.appendChild(script);
+      });
+    }
+
+    // return promise
+    return this.loadGM;
+  }
+
   componentDidMount() {
-    // starts requesting data from Wikipedia API
+    // request data from Wikipedia API
     this.requestWikiData();
+    // initiate Google Maps API request
+    this.loadMap();
+    // handle error upon Google Maps API failure by notifying the user
+    window.gm_authFailure = () => {
+      alert('An error occured while loading the map, please double check your Google API key!');
+    };
   }
 
   render() {
