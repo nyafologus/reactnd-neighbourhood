@@ -6,6 +6,7 @@ import './App.css';
 import NavBar from './Components/NavBar.js';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
+import MapStyle from './Components/MapStyle.json';
 
 class App extends Component {
   constructor(props) {
@@ -98,10 +99,16 @@ class App extends Component {
     this.loadMap().then((google) => {
       map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: 47.6666, lng: 19.2222 },
+        // MapStyle from http://snazzymaps.com/style/146660/globex
+        styles: MapStyle,
         zoom: 8,
         mapTypeControl: false,
         scrollwheel: false
       });
+      // generates new infowindow to display location specific content
+      var infowindow = new google.maps.InfoWindow({ maxWidth: 700 });
+      this.generateMarkers(map);
+      this.setState({ map, infowindow });
     });
   }
 
