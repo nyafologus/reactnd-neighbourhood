@@ -93,6 +93,18 @@ class App extends Component {
     return this.loadGM;
   }
 
+  initMap() {
+    let map;
+    this.loadMap().then((google) => {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: { lat: 47.6666, lng: 19.2222 },
+        zoom: 8,
+        mapTypeControl: false,
+        scrollwheel: false
+      });
+    });
+  }
+
   componentDidMount() {
     // request data from Wikipedia API
     this.requestWikiData();
