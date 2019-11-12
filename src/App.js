@@ -14,17 +14,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      request: false,
       // visibility refers to the state of navigation bar
       visible: false,
-      // loads Magical Places array from external json file
-      mylocations: require('./Data/Places.json'),
+      // load Magical Places array from external json file
       data: [],
-      // indicates map loading request
-      request: false,
+      mylocations: require('./Data/Places.json'),
       map: {},
+      markers: [],
       infowindow: ''
     };
     this.NavBarIsVisible = this.NavBarIsVisible.bind(this);
+    this.markerSelect = this.markerSelect.bind(this);
   }
 
   // changes visibility of side Navigation Bar
@@ -169,11 +170,34 @@ class App extends Component {
     this.setState({ markers });
   }
 
+  //select specific marker, populate its infowindow with relevant content
+  markerSelect(marker) {
+    this.state.infowindow.open(this.state.map, marker);
+    this.state.data.filter((item) => {
+      if (item.id === marker.id) {
+        this.state.infowindow.setContent(`<div class=marker>
+          <h1 class="leckerli center">${marker.title} </h1>
+          <img class="marker-image" src=${marker.image} alt=${marker.alt}/>
+          <div>
+            <p>${item.text} ...</p>
+            <a href=${item.url} target="_blank" rel="noopener noreferrer">${item.visitWiki}</a>
+          </div>
+        </div>`);
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function() {
+          marker.setAnimation(null);
+        }, 666);
+      }
+    });
+  }
+
   componentDidMount() {
     // request data from Wikipedia API
     this.requestWikiData();
     // initiate Google Maps API request
     this.loadMap();
+    // load Google Maps
+    this.initMap();
     // handle error upon Google Maps API failure by notifying the user
     window.gm_authFailure = () => {
       alert('An error occured while loading the map, please double check your Google API key!');
