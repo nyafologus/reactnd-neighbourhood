@@ -6,6 +6,8 @@ import './App.css';
 import NavBar from './Components/NavBar.js';
 import Header from './Components/Header.js';
 import Footer from './Components/Footer.js';
+import crowDefault from './Icons/crowDefault.png';
+import crowHover from './Icons/crowHover.png';
 import MapStyle from './Components/MapStyle.json';
 
 class App extends Component {
@@ -19,7 +21,8 @@ class App extends Component {
       data: [],
       // indicates map loading request
       request: false,
-      map: {}
+      map: {},
+      infowindow: ''
     };
     this.NavBarIsVisible = this.NavBarIsVisible.bind(this);
   }
@@ -110,6 +113,60 @@ class App extends Component {
       this.generateMarkers(map);
       this.setState({ map, infowindow });
     });
+  }
+
+  generateMarkers(map) {
+    let self = this;
+    let bounds = new google.maps.LatLngBounds();
+    let markers = [];
+
+    // define location specific variables
+    this.state.mylocations.forEach((item) => {
+      let position = item.latlng;
+      let title = item.name;
+      let markerID = item.id;
+      let markerImage = item.pic;
+      let alt = item.alt;
+
+      // generate markers on Google Maps
+      let marker = new google.maps.Marker({
+        map: map,
+        position: position,
+        title: title,
+        animation: google.maps.Animation.DROP,
+        icon: crowDefault,
+        id: markerID,
+        image: markerImage,
+        alt: alt
+      });
+
+      // add them one by one to markers array
+      markers.push(marker);
+
+      // handle click events
+      marker.addListener('click', () => {
+        self.markerSelect(marker);
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+        setTimeout(function() {
+          marker.setAnimation(null);
+        }, 666);
+      });
+
+      // handle hover events
+      marker.addListener('mouseover', function() {
+        this.setIcon(crowHover);
+      });
+
+      // reset hover marker icon to default
+      marker.addListener('mouseout', function() {
+        this.setIcon(crowDefault);
+      });
+
+      bounds.extend(marker.position);
+    });
+    map.fitBounds(bounds);
+
+    this.setState({ markers });
   }
 
   componentDidMount() {
