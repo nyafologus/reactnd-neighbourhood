@@ -251,6 +251,114 @@ nav svg.hidden {
   outline: 0;
 }
 
+/*========== Map and Markers ===========*/
+
+#map {
+  width: 100%;
+  height: 66vh;
+}
+
+.marker {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--big-padding);
+  margin-bottom: 30px;
+  max-width: 220px;
+  overflow: hidden;
+}
+
+.marker h1 {
+  line-height: 1.2em;
+  font-size: 2em;
+  padding: 5px 10px;
+}
+
+.marker p {
+  padding-top: var(--main-padding);
+  padding-bottom: var(--main-padding);
+  text-align: justify;
+  font-size: 1.05em;
+}
+
+.marker a {
+  font-size: 15px;
+  position: absolute;
+  bottom: 5px;
+  right: 50px;
+  background: var(--pumpkin);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.marker a:hover,
+.marker a:focus {
+  background: var(--midnight-navy);
+  transform: scale(1.15);
+  outline: 0;
+}
+
+.marker-image {
+  width: 200px;
+  height: 180px;
+  overflow: hidden;
+  border-radius: 25%;
+  margin-right: 10px;
+}
+
+#err {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  line-height: 1.6em;
+  font-size: 1.3em;
+  color: var(--pumpkin);
+}
+
+#err svg {
+  max-height: 70vh;
+  max-width: 100vw;
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 5s;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#alternative-content p {
+  text-align: center;
+  padding-bottom: var(--main-padding);
+}
+
+#alternative-content h1 {
+  font-size: 1.7em;
+  padding-top: var(--big-padding);
+}
+
 /*========= Footer ========*/
 
 footer {
