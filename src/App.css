@@ -394,3 +394,91 @@ footer a:focus {
   right: 0;
   z-index: -1;
 }
+
+@media screen and (min-width: 650px) {
+  :root {
+    --main-padding: 1%;
+    --main-margin: 2%;
+    --big-padding: 3%;
+    --big-margin: 6%;
+  }
+
+  header {
+    flex-flow: row wrap;
+  }
+
+  header .leckerli {
+    margin-top: 25px;
+  }
+
+  #main-view.scroll {
+    margin-left: 270px;
+    transition: margin-left 0.5s;
+  }
+
+  #main-view.unscroll {
+    margin-left: 0;
+    transition: margin-right 0.5s;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+    --main-margin: 1.2%;
+    --big-padding: 2.5%;
+    --big-margin: 2.5%;
+  }
+
+  .marker {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--big-padding);
+    margin-bottom: 30px;
+    max-width: 300px;
+    overflow: hidden;
+  }
+
+  .marker p {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    text-align: justify;
+    font-size: 1.05em;
+  }
+
+  .marker h1 {
+    line-height: 1.2em;
+    font-size: 2em;
+    padding: 5px 10px;
+  }
+
+  .marker a {
+    font-size: 15px;
+    position: absolute;
+    bottom: 5px;
+    right: 100px;
+    background: var(--pumpkin);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+
+  .marker a:hover,
+  .marker a:focus {
+    background: var(--midnight-navy);
+    transform: scale(1.15);
+    outline: 0;
+  }
+
+  .marker-image {
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
