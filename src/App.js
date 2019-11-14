@@ -63,8 +63,8 @@ class App extends Component {
           .catch(() => {
             let e = {
               id: location.id,
-              text: 'Unfortunately an error occured while obtaining data from Wikipedia',
-              visitWiki: 'Please refresh'
+              text: 'Unfortunately an error occured while obtaining data from Wikipedia.',
+              visitWiki: 'Please refresh the page.'
             };
             console.log('ERROR! Wiki API could not load.');
             noData.push(e);
@@ -277,7 +277,7 @@ class App extends Component {
         <nav className='hidden' />
         <div id='err' className='leckerli fadeIn'>
           <h1>ERROR</h1>
-          <h2>unable to load content, please try again later?</h2>
+          <h2>Unable to load content, please try again later.</h2>
         </div>
         <Footer />
       </div>
