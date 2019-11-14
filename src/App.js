@@ -13,13 +13,15 @@ import MapStyle from './Components/MapStyle.json';
 class App extends Component {
   constructor(props) {
     super(props);
+    // indicates map loading request
     this.state = {
+      // load Magical Places array from external json file
+      mylocations: require('./Data/Places.json'),
       request: false,
       // visibility refers to the state of navigation bar
       visible: false,
-      // load Magical Places array from external json file
+      // data array refers to fetched information from Wikipedia
       data: [],
-      mylocations: require('./Data/Places.json'),
       map: {},
       markers: [],
       infowindow: ''
@@ -28,7 +30,7 @@ class App extends Component {
     this.markerSelect = this.markerSelect.bind(this);
   }
 
-  // changes visibility of side Navigation Bar
+  // toggle visibility of side Navigation Bar
   NavBarIsVisible() {
     this.setState({
       visible: !this.state.visible
@@ -39,14 +41,14 @@ class App extends Component {
     let wikiData = [];
     let noData = [];
     this.state.mylocations.map((location) => {
-      // fetches data from Wikipedia API
+      // fetch data from Wikipedia API
       return (
         fetch(
           `https://en.wikipedia.org/w/api.php?&action=query&list=search&prop=extracts&titles&format=json&origin=*&srlimit=1&srsearch=${location.name}`
         )
           .then((res) => res.json())
           .then((data) => {
-            // generates custom URL for more information
+            // generate custom URL for more information
             let url = encodeURI(`https://en.wikipedia.org/wiki/${data.query.search['0'].title}`);
             let e = {
               text: data.query.search['0'].snippet,
@@ -57,7 +59,7 @@ class App extends Component {
             wikiData.push(e);
             this.setState({ data: wikiData });
           })
-          // handles error in case of fetching failure
+          // handle error in case of fetching failure
           .catch(() => {
             let e = {
               id: location.id,
@@ -72,7 +74,7 @@ class App extends Component {
     });
   }
 
-  // credits go to commenters at https://stackoverflow.com/questions/48493960/using-google-map-in-react-component/
+  // credit goes to commenters at https://stackoverflow.com/questions/48493960/using-google-map-in-react-component/
   loadMap() {
     if (!this.loadGM) {
       // define promise
@@ -109,7 +111,7 @@ class App extends Component {
         mapTypeControl: false,
         scrollwheel: false
       });
-      // generates new infowindow to display location specific content
+      // generate new infowindow to display location specific content
       var infowindow = new google.maps.InfoWindow({ maxWidth: 700 });
       this.generateMarkers(map);
       this.setState({ map, infowindow });
