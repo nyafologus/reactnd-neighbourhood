@@ -26,7 +26,7 @@ class App extends Component {
       markers: [],
       infowindow: ''
     };
-    this.markerSelect = this.markerSelect.bind(this);
+    this.selectMarker = this.selectMarker.bind(this);
   }
 
   // toggle visibility of side Navigation Bar
@@ -147,7 +147,7 @@ class App extends Component {
 
       // handle click events
       marker.addListener('click', () => {
-        self.markerSelect(marker);
+        self.selectMarker(marker);
         marker.setAnimation(google.maps.Animation.BOUNCE);
         setTimeout(function() {
           marker.setAnimation(null);
@@ -172,7 +172,7 @@ class App extends Component {
   }
 
   //select specific marker, populate its infowindow with relevant content
-  markerSelect(marker) {
+  selectMarker(marker) {
     this.state.infowindow.open(this.state.map, marker);
     this.state.data.filter((item) => {
       if (item.id === marker.id) {
@@ -219,7 +219,7 @@ class App extends Component {
             infowindow={this.state.infowindow}
             onMouseDown={this.isNavBarVisible}
             visible={this.state.visible}
-            markerSelect={this.markerSelect}
+            selectMarker={this.selectMarker}
           />
           <div id='main-view' className={scroll}>
             <Header />

@@ -62,8 +62,8 @@ class NavBar extends Component {
                 key={marker.id}
                 role='button'
                 tabIndex={tabindex}
-                onKeyPress={this.props.markerSelect.bind(this, marker)}
-                onClick={this.props.markerSelect.bind(this, marker)}
+                onKeyPress={this.props.selectMarker.bind(this, marker)}
+                onClick={this.props.selectMarker.bind(this, marker)}
               >
                 {marker.title}
               </li>
