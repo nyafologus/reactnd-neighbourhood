@@ -26,7 +26,6 @@ class App extends Component {
       markers: [],
       infowindow: ''
     };
-    this.selectMarker = this.selectMarker.bind(this);
   }
 
   // toggle visibility of side Navigation Bar
@@ -172,7 +171,7 @@ class App extends Component {
   }
 
   //select specific marker, populate its infowindow with relevant content
-  selectMarker(marker) {
+  selectMarker = (marker) => {
     this.state.infowindow.open(this.state.map, marker);
     this.state.data.filter((item) => {
       if (item.id === marker.id) {
@@ -190,7 +189,7 @@ class App extends Component {
         }, 666);
       }
     });
-  }
+  };
 
   componentDidMount() {
     // request data from Wikipedia API
