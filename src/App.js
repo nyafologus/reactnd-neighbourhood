@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   // toggle visibility of side Navigation Bar
-  NavBarIsVisible = () => {
+  isNavBarVisible = () => {
     this.setState({
       visible: !this.state.visible
     });
@@ -217,7 +217,7 @@ class App extends Component {
           <NavBar
             markers={this.state.markers}
             infowindow={this.state.infowindow}
-            onMouseDown={this.NavBarIsVisible}
+            onMouseDown={this.isNavBarVisible}
             visible={this.state.visible}
             markerSelect={this.markerSelect}
           />
@@ -226,8 +226,8 @@ class App extends Component {
             <nav className={hidden}>
               <svg
                 tabIndex={tabindex}
-                onClick={this.NavBarIsVisible}
-                onKeyDown={this.NavBarIsVisible}
+                onClick={this.isNavBarVisible}
+                onKeyDown={this.isNavBarVisible}
                 role='button'
                 aria-label='open sidebar'
                 alt='menu icon'
