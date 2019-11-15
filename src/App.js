@@ -26,16 +26,15 @@ class App extends Component {
       markers: [],
       infowindow: ''
     };
-    this.NavBarIsVisible = this.NavBarIsVisible.bind(this);
     this.markerSelect = this.markerSelect.bind(this);
   }
 
   // toggle visibility of side Navigation Bar
-  NavBarIsVisible() {
+  NavBarIsVisible = () => {
     this.setState({
       visible: !this.state.visible
     });
-  }
+  };
 
   requestWikiData() {
     let wikiData = [];
