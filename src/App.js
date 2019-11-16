@@ -223,6 +223,7 @@ class App extends Component {
           <div id='main-view' className={scroll}>
             <Header />
             <nav className={hidden}>
+              <span className='ghost-text leckerli'>CLICK ME</span>
               <svg
                 tabIndex={tabindex}
                 onClick={this.isNavBarVisible}
@@ -262,6 +263,7 @@ class App extends Component {
                   </g>
                 </g>
               </svg>
+              <span className='ghost-text leckerli'>IF YOU DARE</span>
             </nav>
             <div id='map' tabIndex='-1' aria-label='Budapest Map' role='application' />
             <Footer />
