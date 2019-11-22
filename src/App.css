@@ -138,9 +138,10 @@ nav {
 
 nav svg {
   padding: 7.5px 25px;
-  height: 55px;
+  height: 5rem;
   cursor: pointer;
   transition: 0.5s;
+  margin-top: -2.5rem;
 }
 
 nav svg:hover,
