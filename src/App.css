@@ -137,11 +137,13 @@ nav {
 } */
 
 nav svg {
-  padding: 7.5px 25px;
-  height: 5rem;
+  padding: 7.5px 10px;
+  height: 4rem;
   cursor: pointer;
   transition: 0.5s;
-  margin-top: -2.5rem;
+  margin-left: 10px;
+  margin-right: 5px;
+  margin-top: -1.5rem;
 }
 
 nav svg:hover,
@@ -487,5 +489,13 @@ footer a:focus {
     margin-bottom: 10px;
     margin-right: 10px;
     margin-left: 10px;
+  }
+
+  .nav svg {
+    padding: 7.5px 25px;
+    height: 5rem;
+    cursor: pointer;
+    transition: 0.5s;
+    margin-top: -2.5rem;
   }
 }
