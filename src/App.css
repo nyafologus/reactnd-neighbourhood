@@ -115,6 +115,8 @@ header .leckerli {
 
 .ghost-text {
   color: var(--purple-light);
+  display: inline-block;
+  margin-bottom: 1rem;
 }
 
 /*========== Side Navigation Bar ===========*/
