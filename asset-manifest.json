@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/reactnd-neighbourbood/static/css/main.53f22ed5.chunk.css",
-    "main.js": "/reactnd-neighbourbood/static/js/main.e3e0c6e5.chunk.js",
-    "main.js.map": "/reactnd-neighbourbood/static/js/main.e3e0c6e5.chunk.js.map",
-    "runtime-main.js": "/reactnd-neighbourbood/static/js/runtime-main.8b816dd7.js",
-    "runtime-main.js.map": "/reactnd-neighbourbood/static/js/runtime-main.8b816dd7.js.map",
-    "static/js/2.12f07544.chunk.js": "/reactnd-neighbourbood/static/js/2.12f07544.chunk.js",
-    "static/js/2.12f07544.chunk.js.map": "/reactnd-neighbourbood/static/js/2.12f07544.chunk.js.map",
-    "index.html": "/reactnd-neighbourbood/index.html",
-    "precache-manifest.1fc76d5257a99ad1928fe84e09fde67e.js": "/reactnd-neighbourbood/precache-manifest.1fc76d5257a99ad1928fe84e09fde67e.js",
-    "service-worker.js": "/reactnd-neighbourbood/service-worker.js",
-    "static/css/main.53f22ed5.chunk.css.map": "/reactnd-neighbourbood/static/css/main.53f22ed5.chunk.css.map",
-    "static/media/moon-logo.8c7a23c1.svg": "/reactnd-neighbourbood/static/media/moon-logo.8c7a23c1.svg"
+    "main.css": "/reactnd-neighbourhood/static/css/main.53f22ed5.chunk.css",
+    "main.js": "/reactnd-neighbourhood/static/js/main.5aae6f98.chunk.js",
+    "main.js.map": "/reactnd-neighbourhood/static/js/main.5aae6f98.chunk.js.map",
+    "runtime-main.js": "/reactnd-neighbourhood/static/js/runtime-main.171cece7.js",
+    "runtime-main.js.map": "/reactnd-neighbourhood/static/js/runtime-main.171cece7.js.map",
+    "static/js/2.12f07544.chunk.js": "/reactnd-neighbourhood/static/js/2.12f07544.chunk.js",
+    "static/js/2.12f07544.chunk.js.map": "/reactnd-neighbourhood/static/js/2.12f07544.chunk.js.map",
+    "index.html": "/reactnd-neighbourhood/index.html",
+    "precache-manifest.0b3f5d0392fb85c8663c7af13a97612b.js": "/reactnd-neighbourhood/precache-manifest.0b3f5d0392fb85c8663c7af13a97612b.js",
+    "service-worker.js": "/reactnd-neighbourhood/service-worker.js",
+    "static/css/main.53f22ed5.chunk.css.map": "/reactnd-neighbourhood/static/css/main.53f22ed5.chunk.css.map",
+    "static/media/moon-logo.8c7a23c1.svg": "/reactnd-neighbourhood/static/media/moon-logo.8c7a23c1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8b816dd7.js",
+    "static/js/runtime-main.171cece7.js",
     "static/js/2.12f07544.chunk.js",
     "static/css/main.53f22ed5.chunk.css",
-    "static/js/main.e3e0c6e5.chunk.js"
+    "static/js/main.5aae6f98.chunk.js"
   ]
 }
