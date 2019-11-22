@@ -87,7 +87,7 @@ class App extends Component {
 
         // load GM API
         const script = document.createElement('script');
-        const API = '';
+        const API = process.env.REACT_APP_GOOGLE_API_KEY;
         script.src = `https://maps.googleapis.com/maps/api/js?key=${API}&callback=resGM`;
         script.async = true;
         document.body.appendChild(script);
