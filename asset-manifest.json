@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/reactnd-neighbourhood/static/css/main.53f22ed5.chunk.css",
+    "main.css": "/reactnd-neighbourhood/static/css/main.26905947.chunk.css",
     "main.js": "/reactnd-neighbourhood/static/js/main.5aae6f98.chunk.js",
     "main.js.map": "/reactnd-neighbourhood/static/js/main.5aae6f98.chunk.js.map",
     "runtime-main.js": "/reactnd-neighbourhood/static/js/runtime-main.171cece7.js",
@@ -8,15 +8,15 @@
     "static/js/2.12f07544.chunk.js": "/reactnd-neighbourhood/static/js/2.12f07544.chunk.js",
     "static/js/2.12f07544.chunk.js.map": "/reactnd-neighbourhood/static/js/2.12f07544.chunk.js.map",
     "index.html": "/reactnd-neighbourhood/index.html",
-    "precache-manifest.0b3f5d0392fb85c8663c7af13a97612b.js": "/reactnd-neighbourhood/precache-manifest.0b3f5d0392fb85c8663c7af13a97612b.js",
+    "precache-manifest.d6288e861c70d59da282fbc0b910c09b.js": "/reactnd-neighbourhood/precache-manifest.d6288e861c70d59da282fbc0b910c09b.js",
     "service-worker.js": "/reactnd-neighbourhood/service-worker.js",
-    "static/css/main.53f22ed5.chunk.css.map": "/reactnd-neighbourhood/static/css/main.53f22ed5.chunk.css.map",
+    "static/css/main.26905947.chunk.css.map": "/reactnd-neighbourhood/static/css/main.26905947.chunk.css.map",
     "static/media/moon-logo.8c7a23c1.svg": "/reactnd-neighbourhood/static/media/moon-logo.8c7a23c1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.171cece7.js",
     "static/js/2.12f07544.chunk.js",
-    "static/css/main.53f22ed5.chunk.css",
+    "static/css/main.26905947.chunk.css",
     "static/js/main.5aae6f98.chunk.js"
   ]
 }
