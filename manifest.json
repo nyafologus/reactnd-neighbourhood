@@ -3,7 +3,7 @@
   "name": "Budapest by Night - React x Google Maps x Wiki App",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "village.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     }
