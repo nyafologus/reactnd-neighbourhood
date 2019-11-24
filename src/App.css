@@ -109,14 +109,16 @@ header {
 }
 
 header .leckerli {
-  font-size: 2em;
+  font-size: 1.7em;
   color: var(--pumpkin);
 }
 
 .ghost-text {
   color: var(--purple-light);
   display: inline-block;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  transform: translateY(-6px);
+  margin-bottom: 1.3rem;
 }
 
 /*========== Side Navigation Bar ===========*/
@@ -311,11 +313,10 @@ nav svg.hidden {
 }
 
 .marker-image {
-  width: 200px;
-  height: 180px;
-  overflow: hidden;
-  border-radius: 25%;
-  margin-right: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+  margin: 1rem;
 }
 
 #err {
@@ -438,6 +439,17 @@ footer a:focus {
     --big-margin: 2.5%;
   }
 
+  header .leckerli {
+    font-size: 2.2em;
+    color: var(--pumpkin);
+  }
+
+  .ghost-text {
+    transform: skewY(-4deg);
+    font-size: 1.3rem;
+    letter-spacing: 0.4rem;
+  }
+
   .marker {
     display: flex;
     flex-flow: column;
@@ -482,14 +494,6 @@ footer a:focus {
     color: white;
     transform: scale(1.15);
     outline: 0;
-  }
-
-  .marker-image {
-    width: 20rem;
-    height: auto;
-    overflow: hidden;
-    border-radius: 5%;
-    margin: 10px 20px;
   }
 
   .nav svg {
