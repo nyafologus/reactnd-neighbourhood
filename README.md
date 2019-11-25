@@ -1,9 +1,10 @@
 # Google Maps x React x Wiki Neighbourhood App
 
 ## Description
->This is the 8th and final project for the Udacity [Front-End Web Dev Nanodegree](https://udacity.com/course/front-end-web-developer-nanodegree--nd001/ "Front-End Web Developer Nanodegree") and part of the [React Fundamentals Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019/ "React Developer Nanodegree") course.
 
 This single page application was built from scratch using ReactJS, and features data using [Google Maps](https://cloud.google.com/maps-platform/ "Google Maps API") Javascript API, as well as [Wikipedia](https://www.mediawiki.org/wiki/API:Main_page "Wikipedia API") 3rd party API.
+
+>This is the 8th and final project for the Udacity [Front-End Web Dev Nanodegree](https://udacity.com/course/front-end-web-developer-nanodegree--nd001/ "Front-End Web Developer Nanodegree") and part of the [React Fundamentals Nanodegree](https://www.udacity.com/course/react-nanodegree--nd019/ "React Developer Nanodegree") course.
 
 [![Budapest at Midnight App Preview](src/nbh-app.png)](http://nyafologus.github.io/reactnd-neighbourhood/ "Budapest at Midnight")
 
