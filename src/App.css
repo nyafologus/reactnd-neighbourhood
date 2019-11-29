@@ -297,7 +297,6 @@ nav svg.hidden {
   font-size: 15px;
   position: absolute;
   bottom: 5px;
-  right: 50px;
   background: var(--pumpkin);
   color: var(--midnight-navy);
   padding: 5px 10px;
@@ -308,15 +307,17 @@ nav svg.hidden {
 .marker a:hover,
 .marker a:focus {
   background: var(--midnight-navy);
-  transform: scale(1.15);
-  outline: 0;
+  color: var(--pumpkin);
+  transform: scale(1.05);
+  outline: none;
+  border: 1px solid var(--pumpkin);
 }
 
 .marker-image {
   width: 100%;
   height: auto;
   border-radius: 5%;
-  margin: 1rem;
+  margin: 0.5rem;
 }
 
 #err {
