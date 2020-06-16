@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^8.2.0",
     "escape-string-regexp": "^2.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.11.0",
@@ -24,8 +25,16 @@
     "extends": "react-app"
   },
   "browserslist": {
-    "production": [ ">0.2%", "not dead", "not op_mini all" ],
-    "development": [ "last 1 chrome version", "last 1 firefox version", "last 1 safari version" ]
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "gh-pages": "^2.1.1"
